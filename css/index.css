@@ -7,8 +7,6 @@
 }
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -32,6 +30,13 @@ aside {
   justify-content: center;
   height: 100vh;
   left: calc(50vw - 530px);
+}
+
+h1,
+h2,
+p {
+  /* normalize css 초기화 */
+  margin: initial;
 }
 
 .background {
