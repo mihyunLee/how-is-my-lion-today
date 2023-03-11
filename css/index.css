@@ -10,12 +10,19 @@
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+p {
+  margin: initial;
+}
+
 body {
   font-family: Pretendard-Regular, "Times New Roman", Dotum, "돋움", sans-serif;
   height: 100vh;
   max-height: 100vh;
 
-  text-align: center;
+  /* text-align: center; */
 }
 
 main {
@@ -30,13 +37,6 @@ aside {
   justify-content: center;
   height: 100vh;
   left: calc(50vw - 530px);
-}
-
-h1,
-h2,
-p {
-  /* normalize css 초기화 */
-  margin: initial;
 }
 
 .background {
