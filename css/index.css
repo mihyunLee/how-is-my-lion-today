@@ -17,6 +17,10 @@ p {
   margin: initial;
 }
 
+h2 {
+  font-size: 1.4em;
+}
+
 body {
   font-family: Pretendard-Regular, "Times New Roman", Dotum, "돋움", sans-serif;
   height: 100vh;
@@ -37,6 +41,16 @@ aside {
   justify-content: center;
   height: 100vh;
   left: calc(50vw - 530px);
+}
+
+@media (max-width: 1100px) {
+  aside {
+    display: none;
+  }
+
+  main {
+    margin: 0 auto;
+  }
 }
 
 .background {
