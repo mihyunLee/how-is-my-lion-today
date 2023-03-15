@@ -1,0 +1,28 @@
+.focus-level button {
+  width: 3.75em;
+  height: 3.75em;
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.focus-level button:hover {
+  opacity: 1.2;
+  background-color: var(--gray500-color);
+  transition: all 0.1s;
+}
+
+.focus-level button:active,
+.focus-level button:focus {
+  outline-color: var(--focus-color);
+  background-color: var(--focus-color);
+  color: white;
+}
+
+@media (max-width: 424px) {
+  .focus-level button {
+    width: 3em;
+    height: 3em;
+  }
+}
