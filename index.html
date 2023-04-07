@@ -1,226 +1,190 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/variables.css" />
-    <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/index.css" />
-    <title>오늘의 사자 체크하기 | 회고하기</title>
-  </head>
-  <body>
-    <!-- 사이드 텍스트 -->
-    <aside>
-      <p class="f-2xl">
-        오늘 스쿨은 어땠나요?<br />
-        나를 되돌아보고 싶다면,<br />
-        나의 사자를 체크해보세요✔️
-      </p>
-      <p class="f-xl">매 교시 집중도를 체크하며 하루를 회고해요</p>
-    </aside>
-    <!-- 메인 화면 -->
-    <main>
-      <header>
-        <h1>로고</h1>
-      </header>
-      <!-- 집중도 표시 -->
-      <section class="flex focus-status-container">
-        <div class="focus-status">
-          <h2 class="f-lg">오늘 사자의 집중도</h2>
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/616/616412.png"
-            alt="열정적인사자"
-          />
-          <p>열정적인 사자</p>
-        </div>
-      </section>
-      <!-- 집중도 체크, 오늘의 회고 -->
-      <div class="write-container">
-        <section>
-          <header>
-            <h2>오늘의 사자 체크하기✔️</h2>
-          </header>
-          <div class="focus-check">
-            <h3>1교시(09:00 - 09:50)</h3>
-            <p>얼만큼 집중했나요?</p>
-            <div class="focus-level">
-              <button type="button">1</button>
-              <button type="button">2</button>
-              <button type="button">3</button>
-              <button type="button">4</button>
-              <button type="button">5</button>
-            </div>
-            <p>이번 교시를 세 줄 이내로 요약해보세요!</p>
-            <textarea
-              name="class-textarea"
-              rows="3"
-              class="textarea"
-            ></textarea>
-          </div>
-        </section>
 
-        <section>
-          <div class="focus-check">
-            <h3>2교시(10:00 - 10:50)</h3>
-            <p>얼만큼 집중했나요?</p>
-            <div class="focus-level">
-              <button type="button">1</button>
-              <button type="button">2</button>
-              <button type="button">3</button>
-              <button type="button">4</button>
-              <button type="button">5</button>
-            </div>
-            <p>이번 교시를 세 줄 이내로 요약해보세요!</p>
-            <textarea
-              name="class-textarea"
-              rows="3"
-              class="textarea"
-            ></textarea>
-          </div>
-        </section>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/variables.css" />
+	<link rel="stylesheet" href="css/common.css" />
+	<link rel="stylesheet" href="css/index.css" />
+	<title>오늘의 사자 체크하기 | 회고하기</title>
+</head>
 
-        <section>
-          <div class="focus-check">
-            <h3>3교시(11:00 - 11:50)</h3>
-            <p>얼만큼 집중했나요?</p>
-            <div class="focus-level">
-              <button type="button">1</button>
-              <button type="button">2</button>
-              <button type="button">3</button>
-              <button type="button">4</button>
-              <button type="button">5</button>
-            </div>
-            <p>이번 교시를 세 줄 이내로 요약해보세요!</p>
-            <textarea
-              name="class-textarea"
-              rows="3"
-              class="textarea"
-            ></textarea>
-          </div>
-        </section>
+<body>
+	<!-- 사이드 텍스트 -->
+	<aside>
+		<p class="f-2xl">
+			오늘 스쿨은 어땠나요?<br />
+			나를 되돌아보고 싶다면,<br />
+			나의 사자를 체크해보세요✔️
+		</p>
+		<p class="f-xl">매 교시 집중도를 체크하며 하루를 회고해요</p>
+	</aside>
+	<!-- 메인 화면 -->
+	<main>
+		<header>
+			<h1>로고</h1>
+		</header>
+		<!-- 집중도 표시 -->
+		<section class="flex focus-status-container">
+			<div class="focus-status">
+				<h2 class="f-lg">오늘 사자의 집중도</h2>
+				<img src="https://cdn-icons-png.flaticon.com/512/616/616412.png" alt="열정적인사자" />
+				<p>열정적인 사자</p>
+			</div>
+		</section>
+		<!-- 집중도 체크, 오늘의 회고 -->
+		<div class="write-container">
+			<section>
+				<header>
+					<h2>오늘의 사자 체크하기✔️</h2>
+				</header>
+				<div class="focus-check">
+					<h3>1교시(09:00 - 09:50)</h3>
+					<p>얼만큼 집중했나요?</p>
+					<div class="focus-level">
+						<button type="button">1</button>
+						<button type="button">2</button>
+						<button type="button">3</button>
+						<button type="button">4</button>
+						<button type="button">5</button>
+					</div>
+					<p>이번 교시를 세 줄 이내로 요약해보세요!</p>
+					<textarea name="class-textarea" rows="3" class="textarea"></textarea>
+				</div>
+			</section>
 
-        <section>
-          <div class="focus-check">
-            <h3>4교시(13:00 - 13:50)</h3>
-            <p>얼만큼 집중했나요?</p>
-            <div class="focus-level">
-              <button type="button">1</button>
-              <button type="button">2</button>
-              <button type="button">3</button>
-              <button type="button">4</button>
-              <button type="button">5</button>
-            </div>
-            <p>이번 교시를 세 줄 이내로 요약해보세요!</p>
-            <textarea
-              name="class-textarea"
-              rows="3"
-              class="textarea"
-            ></textarea>
-          </div>
-        </section>
+			<section>
+				<div class="focus-check">
+					<h3>2교시(10:00 - 10:50)</h3>
+					<p>얼만큼 집중했나요?</p>
+					<div class="focus-level">
+						<button type="button">1</button>
+						<button type="button">2</button>
+						<button type="button">3</button>
+						<button type="button">4</button>
+						<button type="button">5</button>
+					</div>
+					<p>이번 교시를 세 줄 이내로 요약해보세요!</p>
+					<textarea name="class-textarea" rows="3" class="textarea"></textarea>
+				</div>
+			</section>
 
-        <section>
-          <div class="focus-check">
-            <h3>5교시(14:00 - 14:50)</h3>
-            <p>얼만큼 집중했나요?</p>
-            <div class="focus-level">
-              <button type="button">1</button>
-              <button type="button">2</button>
-              <button type="button">3</button>
-              <button type="button">4</button>
-              <button type="button">5</button>
-            </div>
-            <p>이번 교시를 세 줄 이내로 요약해보세요!</p>
-            <textarea
-              name="class-textarea"
-              rows="3"
-              class="textarea"
-            ></textarea>
-          </div>
-        </section>
+			<section>
+				<div class="focus-check">
+					<h3>3교시(11:00 - 11:50)</h3>
+					<p>얼만큼 집중했나요?</p>
+					<div class="focus-level">
+						<button type="button">1</button>
+						<button type="button">2</button>
+						<button type="button">3</button>
+						<button type="button">4</button>
+						<button type="button">5</button>
+					</div>
+					<p>이번 교시를 세 줄 이내로 요약해보세요!</p>
+					<textarea name="class-textarea" rows="3" class="textarea"></textarea>
+				</div>
+			</section>
 
-        <section>
-          <div class="focus-check">
-            <h3>6교시(15:00 - 15:50)</h3>
-            <p>얼만큼 집중했나요?</p>
-            <div class="focus-level">
-              <button type="button">1</button>
-              <button type="button">2</button>
-              <button type="button">3</button>
-              <button type="button">4</button>
-              <button type="button">5</button>
-            </div>
-            <p>이번 교시를 세 줄 이내로 요약해보세요!</p>
-            <textarea
-              name="class-textarea"
-              rows="3"
-              class="textarea"
-            ></textarea>
-          </div>
-        </section>
+			<section>
+				<div class="focus-check">
+					<h3>4교시(13:00 - 13:50)</h3>
+					<p>얼만큼 집중했나요?</p>
+					<div class="focus-level">
+						<button type="button">1</button>
+						<button type="button">2</button>
+						<button type="button">3</button>
+						<button type="button">4</button>
+						<button type="button">5</button>
+					</div>
+					<p>이번 교시를 세 줄 이내로 요약해보세요!</p>
+					<textarea name="class-textarea" rows="3" class="textarea"></textarea>
+				</div>
+			</section>
 
-        <section>
-          <div class="focus-check">
-            <h3>7교시(16:00 - 16:50)</h3>
-            <p>얼만큼 집중했나요?</p>
-            <div class="focus-level">
-              <button type="button">1</button>
-              <button type="button">2</button>
-              <button type="button">3</button>
-              <button type="button">4</button>
-              <button type="button">5</button>
-            </div>
-            <p>이번 교시를 세 줄 이내로 요약해보세요!</p>
-            <textarea
-              name="class-textarea"
-              rows="3"
-              class="textarea"
-            ></textarea>
-          </div>
-        </section>
+			<section>
+				<div class="focus-check">
+					<h3>5교시(14:00 - 14:50)</h3>
+					<p>얼만큼 집중했나요?</p>
+					<div class="focus-level">
+						<button type="button">1</button>
+						<button type="button">2</button>
+						<button type="button">3</button>
+						<button type="button">4</button>
+						<button type="button">5</button>
+					</div>
+					<p>이번 교시를 세 줄 이내로 요약해보세요!</p>
+					<textarea name="class-textarea" rows="3" class="textarea"></textarea>
+				</div>
+			</section>
 
-        <section>
-          <div class="focus-check">
-            <h3>8교시(17:00 - 17:50)</h3>
-            <p>얼만큼 집중했나요?</p>
-            <div class="focus-level">
-              <button type="button">1</button>
-              <button type="button">2</button>
-              <button type="button">3</button>
-              <button type="button">4</button>
-              <button type="button">5</button>
-            </div>
-            <p>이번 교시를 세 줄 이내로 요약해보세요!</p>
-            <textarea
-              name="class-textarea"
-              rows="3"
-              class="textarea"
-            ></textarea>
-          </div>
-        </section>
+			<section>
+				<div class="focus-check">
+					<h3>6교시(15:00 - 15:50)</h3>
+					<p>얼만큼 집중했나요?</p>
+					<div class="focus-level">
+						<button type="button">1</button>
+						<button type="button">2</button>
+						<button type="button">3</button>
+						<button type="button">4</button>
+						<button type="button">5</button>
+					</div>
+					<p>이번 교시를 세 줄 이내로 요약해보세요!</p>
+					<textarea name="class-textarea" rows="3" class="textarea"></textarea>
+				</div>
+			</section>
 
-        <section>
-          <header>
-            <h2>오늘의 회고✏️</h2>
-          </header>
-          <div class="focus-check">
-            <textarea
-              name="class-textarea"
-              rows="5"
-              class="textarea"
-            ></textarea>
-          </div>
-        </section>
-      </div>
+			<section>
+				<div class="focus-check">
+					<h3>7교시(16:00 - 16:50)</h3>
+					<p>얼만큼 집중했나요?</p>
+					<div class="focus-level">
+						<button type="button">1</button>
+						<button type="button">2</button>
+						<button type="button">3</button>
+						<button type="button">4</button>
+						<button type="button">5</button>
+					</div>
+					<p>이번 교시를 세 줄 이내로 요약해보세요!</p>
+					<textarea name="class-textarea" rows="3" class="textarea"></textarea>
+				</div>
+			</section>
 
-      <!-- 저작권 표시 -->
-      <footer class="flex f-sm">
-        <p>Copyright 2023. Nor All rights reserved.</p>
-      </footer>
-    </main>
-    <!-- JavaScript -->
-    <script src=""></script>
-  </body>
+			<section>
+				<div class="focus-check">
+					<h3>8교시(17:00 - 17:50)</h3>
+					<p>얼만큼 집중했나요?</p>
+					<div class="focus-level">
+						<button type="button">1</button>
+						<button type="button">2</button>
+						<button type="button">3</button>
+						<button type="button">4</button>
+						<button type="button">5</button>
+					</div>
+					<p>이번 교시를 세 줄 이내로 요약해보세요!</p>
+					<textarea name="class-textarea" rows="3" class="textarea"></textarea>
+				</div>
+			</section>
+
+			<section>
+				<header>
+					<h2>오늘의 회고✏️</h2>
+				</header>
+				<div class="focus-check">
+					<textarea name="class-textarea" rows="5" class="textarea"></textarea>
+				</div>
+			</section>
+		</div>
+
+		<!-- 저작권 표시 -->
+		<footer class="flex f-sm">
+			<p>Copyright 2023. Nor All rights reserved.</p>
+		</footer>
+	</main>
+	<!-- JavaScript -->
+	<script src=""></script>
+</body>
+
 </html>
