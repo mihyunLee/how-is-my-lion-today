@@ -1,3 +1,33 @@
+/* font style */
+.f-2xl {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 150%;
+
+  text-align: start;
+  margin-bottom: 2rem;
+}
+
+.f-xl {
+  font-size: 1.5rem;
+}
+
+.f-lg {
+  font-size: 1.25rem;
+}
+
+.f-sm {
+  font-size: 0.75rem;
+}
+
+/* flex */
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* button */
 .focus-level button {
   width: 3.75em;
   height: 3.75em;

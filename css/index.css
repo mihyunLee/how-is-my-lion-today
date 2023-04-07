@@ -38,6 +38,19 @@ main {
   margin: 0px 0px 0px calc(50vw - 50px);
 }
 
+main header:nth-child(1) {
+  background-color: var(--white-color);
+}
+
+section {
+  margin: 10px 20px;
+  padding: 30px 28px;
+
+  background-color: var(--white-color);
+
+  border-radius: 20px;
+}
+
 aside {
   position: fixed;
   display: flex;
@@ -47,6 +60,92 @@ aside {
   left: calc(50vw - 530px);
 }
 
+footer {
+  width: 100%;
+  height: fit-content;
+  padding: 0.5rem 0;
+
+  color: var(--gray-color);
+}
+
+/* focus-status */
+.focus-status-container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.focus-status img {
+  width: 2.5em;
+  height: 2.5em;
+  float: right;
+  margin-left: 0.7em;
+  margin-top: 0.6em;
+}
+
+.focus-status img:hover {
+  transform: rotate(15deg);
+  transition: all 0.3s;
+}
+
+.focus-status h2,
+.focus-status p {
+  float: left;
+}
+
+.focus-status p {
+  color: var(--gray-color);
+  font-weight: bold;
+  margin-top: 0.7em;
+  clear: left;
+}
+
+/* write-container */
+.write-container {
+  max-height: calc(100vh - 240px);
+  overflow: scroll;
+  overflow-x: hidden;
+
+  -ms-overflow-style: none;
+}
+
+.write-container::-webkit-scrollbar {
+  display: none;
+}
+
+.write-container header {
+  margin-bottom: 20px;
+}
+
+/* focus-check */
+.focus-check h3 {
+  margin-bottom: 10px;
+}
+
+.focus-check p {
+  color: var(--gray-color);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* focus-level */
+.focus-level {
+  margin: 20px 0px;
+
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.textarea {
+  width: 100%;
+  border: 3px solid var(--nonfocus-color);
+  border-radius: 10px;
+  outline-color: var(--focus-color);
+  resize: none;
+  padding: 10px;
+  overflow: hidden;
+}
+
+/* Media Query */
 @media (max-width: 1100px) {
   aside {
     display: none;
