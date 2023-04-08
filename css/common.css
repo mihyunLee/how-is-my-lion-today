@@ -1,3 +1,15 @@
+/* a11y */
+.a11y-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+
 /* font style */
 .f-2xl {
   font-size: 2rem;
@@ -27,31 +39,36 @@
   align-items: center;
 }
 
-/* button */
-.focus-level button {
-  width: 3.75em;
-  height: 3.75em;
-  border: none;
-  border-radius: 50%;
-
-  cursor: pointer;
-}
-
-.focus-level button:hover {
-  opacity: 1.2;
-  background-color: var(--gray500-color);
-  transition: all 0.1s;
-}
-
-.focus-level button:active,
-.focus-level button:focus {
+/* textarea */
+[class^="textarea"] {
+  width: 100%;
+  border: 3px solid var(--nonfocus-color);
+  border-radius: 10px;
   outline-color: var(--focus-color);
-  background-color: var(--focus-color);
-  color: white;
+  resize: none;
+  margin-top: 10px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+[class^="textarea"]::placeholder {
+  font: inherit;
+  color: var(--gray-color);
+}
+
+/* Media Query */
+@media (max-width: 1100px) {
+  .sec-side {
+    display: none;
+  }
+
+  main {
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 424px) {
-  .focus-level button {
+  input[type="radio"] {
     width: 3em;
     height: 3em;
   }
