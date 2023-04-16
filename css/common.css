@@ -55,21 +55,3 @@
   font: inherit;
   color: var(--gray-color);
 }
-
-/* Media Query */
-@media (max-width: 1100px) {
-  .sec-side {
-    display: none;
-  }
-
-  main {
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 424px) {
-  input[type="radio"] {
-    width: 3em;
-    height: 3em;
-  }
-}
