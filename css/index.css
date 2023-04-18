@@ -40,6 +40,7 @@ button {
 body {
   font-family: Pretendard-Regular, "Times New Roman", Dotum, "돋움", sans-serif;
   max-height: 100vh;
+  overflow: hidden;
 
   background-image: url("../images/bg.jpg");
   background-size: cover;
@@ -140,8 +141,7 @@ fieldset {
 /* write-container */
 .write-container {
   max-height: calc(100vh - 240px);
-  overflow: scroll;
-  overflow-x: hidden;
+  overflow-y: scroll;
 
   -ms-overflow-style: none;
 }
