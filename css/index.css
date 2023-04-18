@@ -29,6 +29,14 @@ li {
   list-style: none;
 }
 
+button {
+  padding: 0;
+  border: none;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 body {
   font-family: Pretendard-Regular, "Times New Roman", Dotum, "돋움", sans-serif;
   max-height: 100vh;
@@ -147,6 +155,10 @@ fieldset {
 }
 
 /* focus-check */
+.focus-check {
+  position: relative;
+}
+
 .focus-check h3 {
   margin-bottom: 15px;
 }
@@ -215,6 +227,24 @@ input[type="radio"]:checked::before {
 
 .focus-level li {
   position: relative;
+}
+
+/* controls */
+.controls {
+  display: none;
+  position: absolute;
+  bottom: -32px;
+  right: 10px;
+}
+
+.controls button {
+  width: 28px;
+  height: 28px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.controls button:hover {
+  filter: brightness(0.95);
 }
 
 /* Media Query */

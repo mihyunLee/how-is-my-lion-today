@@ -40,7 +40,7 @@
 }
 
 /* textarea */
-[class^="textarea"] {
+textarea {
   width: 100%;
   border: 3px solid var(--nonfocus-color);
   border-radius: 10px;
@@ -51,7 +51,7 @@
   overflow: hidden;
 }
 
-[class^="textarea"]::placeholder {
+textarea::placeholder {
   font: inherit;
   color: var(--gray-color);
 }
