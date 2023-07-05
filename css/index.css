@@ -177,6 +177,11 @@ fieldset {
   font-weight: bold;
 }
 
+/* today-check */
+.today-check {
+  position: relative;
+}
+
 /* input-radio */
 input[type="radio"] {
   appearance: none;

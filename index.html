@@ -82,15 +82,14 @@
 							</li>
 						</ol>
 					</fieldset>
-					<!-- TODO: 라인 수 제한  -->
-					<label>이번 교시의 배움을 세 줄 이내로 요약해보세요!
-						<textarea name="class-summary" rows="3" class="textarea" maxlength="98"></textarea>
+					<label>
+						<textarea name="class-summary" rows="3" class="textarea" maxlength="100"></textarea>
 					</label>
 					<div class="controls">
-						<button type="button">
+						<button type="button" class="btn-complete">
 							<img src="./images/check.jpg" alt="1교시 작성 완료 버튼">
 						</button>
-						<button type="button">
+						<button type="button" class="btn-cancle">
 							<img src="./images/cancel.jpg" alt="1교시 작성 취소 버튼">
 						</button>
 					</div>
@@ -139,9 +138,8 @@
 							</li>
 						</ol>
 					</fieldset>
-					<!-- TODO: 라인 수 제한  -->
-					<label>이번 교시의 배움을 세 줄 이내로 요약해보세요!
-						<textarea name="class-summary" rows="3" class="textarea" maxlength="98"></textarea>
+					<label>
+						<textarea name="class-summary" rows="3" class="textarea" maxlength="100"></textarea>
 					</label>
 					<div class="controls">
 						<button type="button">
@@ -196,9 +194,8 @@
 							</li>
 						</ol>
 					</fieldset>
-					<!-- TODO: 라인 수 제한  -->
-					<label>이번 교시의 배움을 세 줄 이내로 요약해보세요!
-						<textarea name="class-summary" rows="3" class="textarea" maxlength="98"></textarea>
+					<label>
+						<textarea name="class-summary" rows="3" class="textarea" maxlength="100"></textarea>
 					</label>
 					<div class="controls">
 						<button type="button">
@@ -253,9 +250,8 @@
 							</li>
 						</ol>
 					</fieldset>
-					<!-- TODO: 라인 수 제한  -->
-					<label>이번 교시의 배움을 세 줄 이내로 요약해보세요!
-						<textarea name="class-summary" rows="3" class="textarea" maxlength="98"></textarea>
+					<label>
+						<textarea name="class-summary" rows="3" class="textarea" maxlength="100"></textarea>
 					</label>
 					<div class="controls">
 						<button type="button">
@@ -310,9 +306,8 @@
 							</li>
 						</ol>
 					</fieldset>
-					<!-- TODO: 라인 수 제한  -->
-					<label>이번 교시의 배움을 세 줄 이내로 요약해보세요!
-						<textarea name="class-summary" rows="3" class="textarea" maxlength="98"></textarea>
+					<label>
+						<textarea name="class-summary" rows="3" class="textarea" maxlength="100"></textarea>
 					</label>
 					<div class="controls">
 						<button type="button">
@@ -367,9 +362,8 @@
 							</li>
 						</ol>
 					</fieldset>
-					<!-- TODO: 라인 수 제한  -->
-					<label>이번 교시의 배움을 세 줄 이내로 요약해보세요!
-						<textarea name="class-summary" rows="3" class="textarea" maxlength="98"></textarea>
+					<label>
+						<textarea name="class-summary" rows="3" class="textarea" maxlength="100"></textarea>
 					</label>
 					<div class="controls">
 						<button type="button">
@@ -424,9 +418,8 @@
 							</li>
 						</ol>
 					</fieldset>
-					<!-- TODO: 라인 수 제한  -->
-					<label>이번 교시의 배움을 세 줄 이내로 요약해보세요!
-						<textarea name="class-summary" rows="3" class="textarea" maxlength="98"></textarea>
+					<label>
+						<textarea name="class-summary" rows="3" class="textarea" maxlength="100"></textarea>
 					</label>
 					<div class="controls">
 						<button type="button">
@@ -481,9 +474,8 @@
 							</li>
 						</ol>
 					</fieldset>
-					<!-- TODO: 라인 수 제한  -->
-					<label>이번 교시의 배움을 세 줄 이내로 요약해보세요!
-						<textarea name="class-summary" rows="3" class="textarea" maxlength="98"></textarea>
+					<label>
+						<textarea name="class-summary" rows="3" class="textarea" maxlength="100"></textarea>
 					</label>
 					<div class="controls">
 						<button type="button">
@@ -496,11 +488,11 @@
 				</section>
 			</div>
 			<div class="sec-main">
-				<article class="today-check">
+				<section class="today-check">
 					<h2 class="title-review">오늘의 회고</h2>
-					<label class="a11y-hidden" for="today-review">오늘의 회고 작성하기</label>
-					<textarea id="today-review" name="today-review" rows="5" class="textarea"
-						placeholder="(최대 5줄까지 작성가능)"></textarea>
+					<label for="today-review"></label>
+					<textarea id="today-review" name="today-review" rows="6" class="textarea" placeholder="(최대 200자까지 작성가능)"
+						maxlength="200"></textarea>
 					<div class="controls">
 						<button type="button">
 							<img src="./images/check.jpg" alt="회고 작성 완료 버튼">
@@ -509,7 +501,7 @@
 							<img src="./images/cancel.jpg" alt="회고 작성 취소 버튼">
 						</button>
 					</div>
-				</article>
+				</section>
 			</div>
 			<button type="reset" class="btn-reset">초기화</button>
 		</form>

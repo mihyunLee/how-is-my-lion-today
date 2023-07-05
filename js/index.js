@@ -2,6 +2,7 @@
 const $focusStatus = document.querySelector(".focus-status p");
 const $container = document.querySelector(".write-form");
 const $focusStatusLists = $container.querySelectorAll(".focus-level");
+const $textarea = $container.querySelectorAll(".textarea");
 
 // -- Variables
 let focusStatusArr = new Array(8).fill(0);
@@ -36,6 +37,52 @@ const renderFocusStatus = () => {
   $focusStatus.textContent = calculateFocusStatus();
 };
 
+/** 글자수 제한하기 */
+const truncateText = (text, maxLength) => {
+  let truncatedText = "";
+  let currentLength = 0;
+
+  for (let i = 0; i < text.length; i++) {
+    if (currentLength <= maxLength) {
+      truncatedText += text.charAt(i);
+    } else {
+      break;
+    }
+  }
+  return truncatedText;
+};
+
+/** 새로고침 시 저장된 회고 내용, 텍스트 길이 불러오기 */
+const init = () => {
+  let initContent = new Array($textarea.length);
+
+  $textarea.forEach((item, idx) => {
+    // 마지막 textarea 일 경우 실행
+    if (idx === $textarea.length - 1) {
+      const content = localStorage.getItem("오늘의 회고");
+
+      if (content) {
+        initContent[idx] = content;
+        item.previousElementSibling.innerText = `오늘의 회고 작성하기 (${initContent[idx].length}/200)`;
+        item.value = content;
+      } else {
+        item.previousElementSibling.innerText = `오늘의 회고 작성하기 (0/200)`;
+      }
+    } else {
+      // 나머지 textarea에 실행
+      const content = localStorage.getItem(`${idx + 1}교시 회고`);
+
+      if (content) {
+        initContent[idx] = content;
+        item.previousSibling.textContent = `이번 교시의 배움을 100자 이내로 요약해보세요! (${initContent[idx].length}/100)`;
+        item.value = content;
+      } else {
+        item.previousSibling.textContent = `이번 교시의 배움을 100자 이내로 요약해보세요! (0/100)`;
+      }
+    }
+  });
+};
+
 // -- Events
 $focusStatusLists.forEach((item, idx) =>
   item.addEventListener("click", (e) => {
@@ -45,3 +92,39 @@ $focusStatusLists.forEach((item, idx) =>
     }
   })
 );
+
+$textarea.forEach((item, idx) => {
+  // textarea 입력 내용 글자 수 제한하기
+  item.addEventListener("input", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+    }
+
+    const maxLength = item.getAttribute("maxlength");
+    const currentText = item.value;
+    let currentLength = currentText.length;
+
+    if (currentLength > maxLength) {
+      item.value = truncateText(currentText, maxLength);
+      currentLength = maxLength;
+    }
+
+    // 마지막 textarea 일 때
+    if (idx === $textarea.length - 1) {
+      item.previousElementSibling.innerText = `오늘의 회고 작성하기 (${currentLength}/200)`;
+    } else {
+      item.previousSibling.textContent = `이번 교시의 배움을 100자 이내로 요약해보세요! (${currentLength}/100)`;
+    }
+  });
+
+  // localStorage에 회고 내용 저장
+  item.addEventListener("change", (e) => {
+    if (idx === $textarea.length - 1) {
+      localStorage.setItem(`오늘의 회고`, e.target.value);
+    } else {
+      localStorage.setItem(`${idx + 1}교시 회고`, e.target.value);
+    }
+  });
+});
+
+init();
