@@ -1,7 +1,6 @@
 // -- DOM
 const $focusStatus = document.querySelector(".focus-status p");
-const $container = document.querySelector(".write-container");
-const $forms = $container.querySelectorAll("form");
+const $container = document.querySelector(".write-form");
 const $focusStatusLists = $container.querySelectorAll(".focus-level");
 
 // -- Variables
