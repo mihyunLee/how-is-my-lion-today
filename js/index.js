@@ -3,6 +3,7 @@ const $focusStatus = document.querySelector(".focus-status p");
 const $container = document.querySelector(".write-form");
 const $focusStatusLists = $container.querySelectorAll(".focus-level");
 const $textarea = $container.querySelectorAll(".textarea");
+const $textareaControls = $container.querySelectorAll(".controls");
 
 // -- Variables
 let focusStatusArr = new Array(8).fill(0);
@@ -94,6 +95,16 @@ $focusStatusLists.forEach((item, idx) =>
 );
 
 $textarea.forEach((item, idx) => {
+  // textarea에 focus시 컨트롤 보임
+  item.addEventListener("focus", () => {
+    $textareaControls[idx].style.display = "block";
+  });
+
+  // textarea에 focusout시 컨트롤 숨기기
+  item.addEventListener("focusout", () => {
+    $textareaControls[idx].style.display = "none";
+  });
+
   // textarea 입력 내용 글자 수 제한하기
   item.addEventListener("input", (e) => {
     if (e.key === "Enter") {
