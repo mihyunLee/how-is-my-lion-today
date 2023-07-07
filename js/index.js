@@ -4,6 +4,7 @@ const $container = document.querySelector(".write-form");
 const $focusStatusLists = $container.querySelectorAll(".focus-level");
 const $textarea = $container.querySelectorAll(".textarea");
 const $textareaControls = $container.querySelectorAll(".controls");
+const $resetBtn = $container.querySelector(".btn-reset");
 
 // -- Variables
 let focusStatusArr = new Array(8).fill(0);
@@ -51,6 +52,19 @@ const truncateText = (text, maxLength) => {
     }
   }
   return truncatedText;
+};
+
+/** textarea의 label 초기화 */
+const reset = () => {
+  $textarea.forEach((item, idx) => {
+    if (idx === $textarea.length - 1) {
+      item.previousElementSibling.innerText = `오늘의 회고 작성하기 (0/200)`;
+    } else {
+      item.previousSibling.textContent = `이번 교시의 배움을 100자 이내로 요약해보세요! (0/100)`;
+    }
+  });
+
+  localStorage.clear();
 };
 
 /** 새로고침 시 저장된 회고 내용, 텍스트 길이 불러오기 */
@@ -137,5 +151,7 @@ $textarea.forEach((item, idx) => {
     }
   });
 });
+
+$resetBtn.addEventListener("click", reset);
 
 init();
