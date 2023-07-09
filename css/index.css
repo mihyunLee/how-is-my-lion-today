@@ -170,7 +170,8 @@ fieldset {
   font-weight: bold;
 }
 
-.focus-check label {
+.focus-check label,
+.today-check label {
   display: block;
   position: relative;
   color: var(--gray-color);
