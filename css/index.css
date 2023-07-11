@@ -116,11 +116,10 @@ fieldset {
 }
 
 .focus-status img {
-  width: 2.5em;
-  height: 2.5em;
+  width: 5em;
+  aspect-ratio: 260 / 230;
   float: right;
-  margin-left: 0.7em;
-  margin-top: 0.6em;
+  margin-left: 0.8em;
 }
 
 .focus-status img:hover {
@@ -131,18 +130,18 @@ fieldset {
 .focus-status h2,
 .focus-status p {
   float: left;
+  margin-top: 0.7em;
 }
 
 .focus-status p {
   color: var(--gray-color);
   font-weight: bold;
-  margin-top: 0.7em;
   clear: left;
 }
 
 /* write-form */
 .write-form {
-  max-height: calc(100vh - 260px);
+  max-height: calc(100vh - 275px);
   overflow-y: scroll;
 
   -ms-overflow-style: none;
