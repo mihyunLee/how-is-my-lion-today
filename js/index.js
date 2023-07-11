@@ -1,5 +1,7 @@
 // -- DOM
-const $focusStatus = document.querySelector(".focus-status p");
+const $focusStatus = document.querySelector(".focus-status");
+const $focusStatusText = $focusStatus.querySelector("p");
+const $focusStatusImg = $focusStatus.querySelector("img");
 const $container = document.querySelector(".write-form");
 const $focusStatusLists = $container.querySelectorAll(".focus-level");
 const $textarea = $container.querySelectorAll(".textarea");
@@ -36,7 +38,10 @@ const calculateFocusStatus = () => {
 };
 
 const renderFocusStatus = () => {
-  $focusStatus.textContent = calculateFocusStatus();
+  $focusStatusText.textContent = calculateFocusStatus();
+
+  const url = `${$focusStatusText.textContent.split("사자")[0].trim()}.png`;
+  $focusStatusImg.src = `/images/${url}`;
 };
 
 /** 글자수 제한하기 */
