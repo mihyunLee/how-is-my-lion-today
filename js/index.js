@@ -9,7 +9,8 @@ const $textareaControls = $container.querySelectorAll(".controls");
 const $resetBtn = $container.querySelector(".btn-reset");
 
 // -- Variables
-let focusStatusArr = new Array(8).fill(0);
+let focusStatusArr =
+  localStorage.getItem(`각 교시 집중도`)?.split(",") || new Array(8).fill(0);
 
 // -- Functions
 const calculateFocusStatus = () => {
@@ -59,20 +60,7 @@ const truncateText = (text, maxLength) => {
   return truncatedText;
 };
 
-/** textarea의 label 초기화 */
-const reset = () => {
-  $textarea.forEach((item, idx) => {
-    if (idx === $textarea.length - 1) {
-      item.previousElementSibling.innerText = `오늘의 회고 작성하기 (0/200)`;
-    } else {
-      item.previousSibling.textContent = `이번 교시의 배움을 100자 이내로 요약해보세요! (0/100)`;
-    }
-  });
-
-  localStorage.clear();
-};
-
-/** 새로고침 시 저장된 회고 내용, 텍스트 길이 불러오기 */
+/** 새로고침 시 저장된 회고 내용, 텍스트 길이, 집중도 불러오기 */
 const init = () => {
   let initContent = new Array($textarea.length);
 
@@ -101,6 +89,32 @@ const init = () => {
       }
     }
   });
+
+  $focusStatusLists.forEach((item, idx) => {
+    const focusStatus = localStorage.getItem(`각 교시 집중도`);
+
+    item.querySelectorAll("input").forEach((radio) => {
+      if (focusStatus && radio.value === focusStatus.split(",")[idx]) {
+        radio.setAttribute("checked", true);
+      } else {
+        radio.removeAttribute("checked");
+      }
+    });
+  });
+};
+
+/** 사용자 입력값 초기화 */
+const reset = () => {
+  $textarea.forEach((item, idx) => {
+    if (idx === $textarea.length - 1) {
+      item.previousElementSibling.innerText = `오늘의 회고 작성하기 (0/200)`;
+    } else {
+      item.previousSibling.textContent = `이번 교시의 배움을 100자 이내로 요약해보세요! (0/100)`;
+    }
+  });
+
+  localStorage.clear();
+  init();
 };
 
 // -- Events
@@ -108,6 +122,7 @@ $focusStatusLists.forEach((item, idx) =>
   item.addEventListener("click", (e) => {
     if (e.target.type === "radio") {
       focusStatusArr[idx] = parseInt(e.target.value);
+      localStorage.setItem(`각 교시 집중도`, focusStatusArr);
       renderFocusStatus();
     }
   })
