@@ -42,7 +42,7 @@ const renderFocusStatus = () => {
   $focusStatusText.textContent = calculateFocusStatus();
 
   const url = `${$focusStatusText.textContent.split("사자")[0].trim()}.png`;
-  $focusStatusImg.src = `/images/${url}`;
+  $focusStatusImg.src = `./images/${url}`;
 };
 
 /** 글자수 제한하기 */
