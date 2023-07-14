@@ -14,7 +14,7 @@ let focusStatusArr =
 
 // -- Functions
 const calculateFocusStatus = () => {
-  let sum = 43 - focusStatusArr.reduce((acc, val) => acc + val, 0);
+  let sum = 43 - focusStatusArr.reduce((acc, val) => acc + parseInt(val), 0);
   let status = "";
 
   switch (parseInt(sum / 8)) {
