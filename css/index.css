@@ -61,6 +61,12 @@ main header:nth-child(1) {
   padding: 10px 20px;
 }
 
+main header h1 img {
+  width: 100%;
+  max-width: 139px;
+  aspect-ratio: 139 / 21;
+}
+
 footer {
   width: 100%;
   height: fit-content;
