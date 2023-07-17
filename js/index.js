@@ -101,6 +101,8 @@ const init = () => {
       }
     });
   });
+
+  renderFocusStatus();
 };
 
 /** 사용자 입력값 초기화 */
@@ -113,7 +115,9 @@ const reset = () => {
     }
   });
 
+  focusStatusArr = new Array(8).fill(0);
   localStorage.clear();
+  renderFocusStatus();
   init();
 };
 
