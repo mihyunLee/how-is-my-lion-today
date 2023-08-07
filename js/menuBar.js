@@ -8,18 +8,17 @@ const openMoreMenu = () => {
   menuList.classList.toggle("open");
 };
 
-const isOutsideMenuList = (target) => {
-  const elementsToCheck = [menuList, menuMoreBtn];
-  return (
-    !elementsToCheck.some((element) => element === target) &&
-    target.nodeName !== "IMG"
-  );
+const closeMoreMenu = () => {
+  menuList.classList.remove("open");
 };
 
-const closeMoreMenu = (e) => {
-  if (e.key === "Escape" || isOutsideMenuList(e.target)) {
-    menuList.classList.remove("open");
-  }
+const isOutsideMenuList = (target) => {
+  const elementsToCheck = [menuList, menuMoreBtn];
+
+  return (
+    !elementsToCheck.some((element) => element === target) &&
+    target.tagName !== "IMG"
+  );
 };
 
 const openNewLink = (e) => {
@@ -33,8 +32,17 @@ const openNewLink = (e) => {
 
 // -- Event
 menuMoreBtn.addEventListener("click", openMoreMenu);
-document.addEventListener("keydown", closeMoreMenu);
-document.addEventListener("click", closeMoreMenu);
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeMoreMenu(e);
+  }
+});
+document.addEventListener("click", (e) => {
+  if (isOutsideMenuList(e.target)) {
+    closeMoreMenu(e);
+  }
+});
+
 menuList.addEventListener("click", (e) => {
   if (e.target.tagName === "LI") {
     openNewLink(e);
