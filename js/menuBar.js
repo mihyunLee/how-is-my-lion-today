@@ -22,7 +22,21 @@ const closeMoreMenu = (e) => {
   }
 };
 
+const openNewLink = (e) => {
+  for (let value of e.target.childNodes.values()) {
+    if (value.tagName === "A") {
+      const href = value.getAttribute("href");
+      window.open(href, "_blank", "noreferrer");
+    }
+  }
+};
+
 // -- Event
 menuMoreBtn.addEventListener("click", openMoreMenu);
 document.addEventListener("keydown", closeMoreMenu);
 document.addEventListener("click", closeMoreMenu);
+menuList.addEventListener("click", (e) => {
+  if (e.target.tagName === "LI") {
+    openNewLink(e);
+  }
+});
