@@ -5,12 +5,60 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>오늘의 사자 체크하기 | 의견 보내기</title>
-
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/variables.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/index.css">
+	<title>오늘의 사자 체크하기 | 개발자에게 의견 보내기</title>
 </head>
 
 <body>
-	<h1>개발자에게 의견 보내기</h1>
+	<!-- 사이드 섹션 -->
+	<section class="sec-side">
+		<h2 class="a11y-hidden">페이지 소개</h2>
+		<p class="f-2xl">
+			오늘 스쿨은 어땠나요?<br>
+			나를 되돌아보고 싶다면,<br>
+			나의 사자를 체크해보세요✔️
+		</p>
+		<p class="f-xl">매 교시 집중도를 체크하며 하루를 회고해요</p>
+	</section>
+	<!-- 메인 화면 -->
+	<main>
+		<header>
+			<h1>
+				<a href="index.html">
+					<img src="./images/logo.svg" alt="오늘의 사자 로고">
+				</a>
+			</h1>
+			<nav class="header-nav">
+				<button type="button" class="btn-more" aria-label="옵션 더보기">
+					<img src="./images/icon-more.svg" alt="더보기 아이콘">
+				</button>
+				<ul class="menu">
+					<li>
+						<a href="https://github.com/mihyunLee/how-is-my-lion-today" target="_blank" rel="noopener noreferrer">
+							Github 바로가기
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<section class="flex sec-main contents-container">
+			<img src="./images/열정적인.png" alt="준비중 이미지">
+			<p class="flex">
+				컨텐츠 준비중입니다. <br>
+				조금만 기다려주세요!
+			</p>
+		</section>
+		<!-- 저작권 표시 -->
+		<footer class="flex f-sm">
+			<p>Copyright 2023. Nor All rights reserved.</p>
+		</footer>
+	</main>
+	<!-- JavaScript -->
+	<script src="./js/index.js"></script>
+	<script src="./js/menuBar.js"></script>
 </body>
 
 </html>

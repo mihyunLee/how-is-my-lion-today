@@ -293,6 +293,21 @@ input[type="radio"]:checked::before {
   border: 2px solid var(--navy-color);
 }
 
+/* contents-container */
+.contents-container {
+  height: calc(100vh - 107px);
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contents-container p {
+  line-height: 1.4em;
+}
+
+.contents-container img {
+  width: 130px;
+}
+
 /* Media Query */
 @media (max-width: 1100px) {
   .sec-side {
